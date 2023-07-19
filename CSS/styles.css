@@ -1,0 +1,204 @@
+:root { /*esta es una pseudopropiedad, nos sirve para empezar a utilizar los colores*/
+  --blanco: #ffffff;
+  --oscuro: #212121;
+  --mas-usado: #ffc107;
+  --secundario: #0097A7;
+  --gris: #757575;
+}
+
+html{
+ font-size: 62.5%;
+ box-sizing: border-box; /*este snippet nos ayuda a que cuando agreguemos cualquier imagen el padding no nos interfiera con el tamaño que nos pudiera llegar a pedir un sitio web*/
+
+
+}
+
+*, *:before, *:after{  /*este es un selector universal, nos ayuda a aplicarle a todos los elementos (imagenes) el bolder box*/
+
+
+  box-sizing: inherit;
+}
+
+
+body{
+  font-size: 16px;
+  font-family: 'Krub', sans-serif;
+  background-image: linear-gradient(to top, var (--secundario) 0%, var(--blanco)); /*codigo par alograr el gradiente de color en la pagina*/
+}
+
+ h1{
+font-size: 3.8rem;
+ }
+ h2{
+font-size: 2.8rem;
+ }
+h3{
+font-size: 1.8rem;
+
+
+}
+.titulo{  
+  font-family: 'Krub', sans-serif;
+  font-weight: bold;  /*es el grosor de la letra, en google fonts se descargaron 2 grosores (400=que se puede poner como normal y 700 que se puede poner como bold)*/
+    text-align: center;
+    color: rgb(69, 112, 168);
+   font-size: 3.8rem   /* 1 rem=10px  */
+   
+}
+
+
+.nav-bg { 
+
+  background-color:var(--secundario)
+
+}
+
+
+.navegacion-principal {
+
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.navegacion-principal a {
+
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 1.5rem;
+ font-weight: bold;
+ padding: 1rem;
+  }
+ 
+  .navegacion-principal a:hover {  /*evento para que se ponga amarillo el enlace con el puntero del mouse*/
+   
+ color: var(--oscuro) ;
+ background-color: var(--mas-usado);
+ 
+  }
+ 
+ 
+
+@media (min-width: 768px) {
+     .navegacion-principal{
+     flex-direction: row;
+     justify-content: space-between
+ }
+
+
+}
+
+/*480px son los que se utililzan en los MQ para los telefonos, 768 para tablet, 1140/1440 para laptop o pc*/
+
+
+
+
+
+.contenedor{
+
+  max-width: 120rem;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin: 0 auto 0 auto; /*esto es exactamente lo miismo que todos los margins que se escribieron arriba, es una manera de ponerlo mas rapido y no escribir tanto codigo*/
+  margin: 0 auto; /*y esto es exactamente lo mismo de arriba, aun mas abreviado, css sabe que si dos valores se repiten dos veces pueden abreviarse asi*/
+ 
+   }
+
+
+
+
+
+
+.boton {
+  background-color: var(--secundario);
+  color: var(--blanco);
+  padding: 1rem 1rem; 
+  margin-top: 2rem;
+ font-size: 2rem;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+border-radius: 1rem;
+width: 100%;
+text-align: center;
+}
+ 
+@media (min-width: 768px) {
+     .boton {
+      width: auto;
+       }
+}
+
+
+.sombra{
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.41);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.41);
+  box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.41);
+  background-color: var(--blanco);
+  padding: 2rem;
+
+
+
+}
+
+
+.navegacion-principal {
+
+  background-color:var(--secundario)
+
+
+            }
+
+h1 span {    /*es recomendable usar siempre clases, en este caso esta la etiqueta (h1) + la clase (.titulo) para darle mas especificidad*/
+    font-size: 2rem;
+}
+
+h2 span {
+
+font-size: 2rem;
+
+color: rgb(214, 125, 140);
+
+}
+
+.hero{ /*utilizamos esta clase para poner la imagen de background*/
+
+background-image: url(../prueba3.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+height: 450px;
+position: relative;  
+margin-bottom: 2rem;
+}
+
+.contenido-hero { /*clase para lograr el sombreado de la imagen principal*/
+
+color: white;
+position: absolute;
+background-color: rgba(0, 0, 0, 0.6);
+width: 100%;
+height: 100%;
+display: flex;    /*codigo para centrar y alinear el texto de la imagen*/
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p  {
+color: var(--blanco);
+}
+
+
+@media (min-width: 768px) {
+     
+
+.servicios{    /*este es css grid para poder centrar los iconos de la navegacion*/
+
+
+}
+  
+}
