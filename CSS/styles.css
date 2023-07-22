@@ -55,10 +55,7 @@ font-size: 1.8rem;
 
 
 .navegacion-principal {
-
-  
   display: flex;
-  flex-direction: column;
   align-items: center;
  
 }
@@ -83,16 +80,13 @@ font-size: 1.8rem;
 @media (min-width: 768px) {
      .navegacion-principal{
      flex-direction: row;
-     justify-content: space-between
+     justify-content: space-around;
  }
 
 
 }
 
 /*480px son los que se utililzan en los MQ para los telefonos, 768 para tablet, 1140/1440 para laptop o pc*/
-
-
-
 
 
 .contenedor{
@@ -191,14 +185,72 @@ justify-content: center;
 .contenido-hero p  {
 color: var(--blanco);
 }
+.Contactanos{
 
-
-@media (min-width: 768px) {
-     
-
-.servicios{    /*este es css grid para poder centrar los iconos de la navegacion*/
+color: var(--mas-usado);
 
 
 }
-  
+
+/*contacto*/
+
+.formulario{
+
+background-color: var(--gris);
+width: min (60rem, 100%);
+margin: 0 auto;
+padding: 2rem;
+border-radius: 2rem;
+
+}
+
+.formulario fieldset {
+  border: none;
+}
+
+.formulario legend{
+text-align: center;
+font-size: 1.8rem;
+text-transform: uppercase;
+font-weight: 700;
+margin-bottom: 2rem;
+color: var(--mas-usado);
+
+}
+
+.contenedor-campos{
+margin-bottom: 1rem;
+
+
+
+
+}
+
+.campo label {
+font-weight: bold ;
+color: var(--blanco);
+margin-bottom: 0.5rem;
+display: block;
+
+
+}
+.servicios {
+
+display: grid;
+grid-template-columns: 20% 40% 20%;
+justify-content: center;
+
+}
+@media (min-width: ) {
+     
+}
+.icono-grid
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center ;
+  padding: 2rem;
+
+
 }
